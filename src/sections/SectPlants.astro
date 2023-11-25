@@ -1,0 +1,45 @@
+---
+import PlantsCard from "../components/PlantsCard.astro";
+const data = [
+  { text: "Breathe", img: "img/plant0.jpg" },
+  { text: "Svelte", img: "img/plant1.jpg" },
+  { text: "Live", img: "img/plant2.jpg" },
+  { text: "Comfort", img: "img/plant3.jpg" },
+  { text: "Art", img: "img/plant4.jpg" },
+];
+---
+
+<section>
+  <h2>
+    What are Plants?
+    <img src="img/plant.svg" alt="" />
+  </h2>
+  <div class="body">
+    {data.map((cardData) => <PlantsCard {...cardData} />)}
+  </div>
+</section>
+
+<style>
+  section {
+    padding-inline: 30px;
+  }
+  h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1em;
+  }
+  h2 img {
+    height: 32px;
+  }
+  .body {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  @media (max-width: 1240px) {
+    .body {
+      flex-wrap: wrap;
+    }
+  }
+</style>

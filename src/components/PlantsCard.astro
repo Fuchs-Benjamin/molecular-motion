@@ -1,0 +1,54 @@
+---
+const { img, text } = Astro.props;
+---
+
+<div class="plantcard">
+  <img src={img} alt="" />
+  <div class="body">
+    <p>Plants are...</p>
+    <p>{text}</p>
+  </div>
+</div>
+
+<style>
+  .plantcard {
+    flex: 1 0 0;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 330px;
+    min-width: 0;
+  }
+  img {
+    border-radius: 20px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .body {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    height: 100%;
+  }
+  p {
+    background-color: rgba(255, 255, 255, 0.595);
+    line-height: 2.5em;
+    padding-inline: 1em;
+    font-size: 12px;
+    border-radius: 20px;
+  }
+  @media (max-width: 1240px) {
+    .plantcard {
+      flex: 1 0 40%;
+    }
+  }
+  @media (max-width: 767.98px) {
+    .plantcard {
+      flex: 1 0 100%;
+    }
+  }
+</style>

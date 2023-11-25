@@ -1,0 +1,31 @@
+---
+import type { Code } from "astro:components";
+import PicturesCard from "../components/PicturesCard.astro";
+const data = [
+  { title: "Internet", img: "img/internet.jpg" },
+  { title: "Events", img: "img/events.jpg" },
+  { title: "Friends", img: "img/friends.jpg" },
+];
+---
+
+<section class="pictures">
+  <h2>Were can we knew more about ecology?</h2>
+  <div class="body">
+    {data.map((object) => <PicturesCard {...object} />)}
+  </div>
+</section>
+
+<style>
+  h2 {
+    margin-bottom: 1em;
+    text-align: center;
+  }
+  .body {
+    display: flex;
+  }
+  @media (max-width: 767.98px) {
+    .body {
+      flex-direction: column;
+    }
+  }
+</style>

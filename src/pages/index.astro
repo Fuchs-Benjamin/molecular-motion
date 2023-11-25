@@ -1,0 +1,37 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SectCustom from "../sections/SectCustom.astro";
+import SectEco from "../sections/SectEco.astro";
+import SectHero from "../sections/SectHero.astro";
+import SectPictures from "../sections/SectPictures.astro";
+import SectPlants from "../sections/SectPlants.astro";
+import SectReg from "../sections/SectReg.astro";
+---
+
+<Layout title="Ecology" description="Site about Ecology">
+  <main>
+    <h1>Our Planet</h1>
+    <SectHero />
+    <SectPlants />
+    <SectPictures />
+    <SectEco />
+    <SectReg />
+  </main>
+</Layout>
+
+<style>
+  h1 {
+    text-align: center;
+    color: rgb(94, 118, 255);
+    box-shadow: 0px 0px 20px black;
+    border-radius: 0 0 10px 10px;
+    line-height: 2.5em;
+    padding: 0 2em;
+    align-self: center;
+  }
+  @media (max-width: 767.98px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+</style>

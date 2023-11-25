@@ -1,0 +1,38 @@
+---
+
+---
+
+<nav class="site-navigation">
+  <a class="link" href="">
+    <img src="img/plant.svg" alt="" />
+  </a>
+  <a class="link" href="">
+    <img src="img/news.svg" alt="" />
+  </a>
+  <a class="link" href="">
+    <img src="img/recycle.svg" alt="" />
+  </a>
+</nav>
+
+<style>
+  img {
+    width: 30px;
+    transition: transform 0.4s ease;
+  }
+  .site-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .link {
+    padding: 0.5rem;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .link:hover {
+    background-color: #02a918a7;
+  }
+  .link:hover img {
+    transform: rotate(-20deg);
+  }
+</style>

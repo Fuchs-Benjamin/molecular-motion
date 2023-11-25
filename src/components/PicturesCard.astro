@@ -1,0 +1,24 @@
+---
+const { title, img } = Astro.props;
+---
+
+<article style={`background-image: url(${img});`}>
+  <h3>{title}</h3>
+</article>
+
+<style>
+  article {
+    flex-grow: 1;
+    flex-basis: 100%;
+    min-height: 200px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  h3 {
+    font-size: 28px;
+  }
+</style>

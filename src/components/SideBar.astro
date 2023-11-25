@@ -1,0 +1,37 @@
+---
+import SiteNavigation from "./SiteNavigation.astro";
+---
+
+<aside class="side-bar">
+  <a class="site-logo" href="">
+    <img src="img/planet.svg" alt="" />
+    <p>Planet!</p>
+  </a>
+  <SiteNavigation />
+</aside>
+<style>
+  .side-bar {
+    position: fixed;
+    inset: 0;
+    right: auto;
+    box-shadow: 0 0 10px black;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgba(255, 255, 255, 0.486);
+  }
+  .site-logo {
+    color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-decoration: none;
+  }
+  img {
+    width: 30px;
+  }
+</style>

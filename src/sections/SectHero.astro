@@ -11,7 +11,6 @@ import SectCustom from "./SectCustom.astro";
 <style>
   .facktcards {
     position: relative;
-    align-self: start;
     background-color: aquamarine;
     border-radius: 30px;
     text-align: center;
@@ -24,6 +23,10 @@ import SectCustom from "./SectCustom.astro";
   @media(max-width: 767.98px){
     .facktcards:nth-child(2n){
       align-self: end;
+    }
+    .facktcards:nth-child(2n+1){
+         align-self: start;
+
     }
     .facktcards:nth-child(2n)::after{
       right: 0;
